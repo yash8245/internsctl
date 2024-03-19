@@ -29,7 +29,21 @@ Displays CPU information.
 .B memory getinfo
 Displays memory information.
 
+.TP
+.B user create <username>
+Creates a new user.
 
+.TP
+.B user list
+Lists all regular users.
+
+.TP
+.B user list --sudo-only
+Lists users with sudo permissions.
+
+.TP
+.B file getinfo <file-name>
+Retrieves information about a file.
 
 .SH EXAMPLES
 Display version information:
@@ -43,6 +57,18 @@ Display CPU information:
 
 Display memory information:
 .B internsctl memory getinfo
+
+Create a new user 'john':
+.B internsctl user create john
+
+List all regular users:
+.B internsctl user list
+
+List users with sudo permissions:
+.B internsctl user list --sudo-only
+
+Retrieve file information for a specific file:
+.B internsctl file getinfo <file-name>
 
 .SH AUTHOR
 Written by Yash Chaudhary.
